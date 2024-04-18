@@ -1,0 +1,506 @@
+html,
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+        'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+        'Noto Color Emoji';
+    background-color: rgba(255, 255, 255, 1);
+    position: relative;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header-wapper {
+    width: 1920px;
+    height: 80px;
+    border-bottom: 1px solid rgba(239, 239, 239, 1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1920px;
+    height: 80px;
+    padding: 0 40px;
+}
+
+.header-left-container {
+    height: 80px;
+    width: 910px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo-link {
+    width: 70px;
+    height: 40px;
+}
+
+.header-search {
+    display: flex;
+    align-items: center;
+    width: 600px;
+    height: 40px;
+    padding: 0 15px;
+    border-radius: 20px;
+    background: rgba(238, 238, 238, 1);
+}
+
+.search-icon::before {
+    display: block;
+    content: url("../img/search.svg");
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+}
+
+.search-input {
+    width: 154px;
+    height: 20px;
+    margin-left: 10px;
+    outline: none;
+    border: none;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(153, 153, 153, 1);
+    font-family: PingFang SC;
+    background: transparent;
+}
+
+.scan-icon::before {
+    display: block;
+    content: url("../img/pic_search.svg");
+    width: 24px;
+    height: 24px;
+    margin-left: 358px;
+    text-align: center;
+    line-height: 24px;
+}
+
+.header-right-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header-user-index {
+    width: 32px;
+    height: 80px;
+    border-bottom: 2px solid rgba(51, 51, 51, 1);
+    padding: 29px 0;
+}
+
+.header-user-title {
+    display: inline-block;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    white-space: nowrap;
+    font-family: PingFang SC;
+    font-size: 16px;
+    color: rgba(51, 51, 51, 1);
+}
+
+.header-user-collect {
+    height: 80px;
+    padding: 29px 0;
+    margin: 0 0 0 40px;
+}
+
+.header-user-login {
+    /* display: none; */
+    width: 107px;
+    height: 40px;
+    margin-left: 27px;
+    padding: 10px 22px;
+    background: rgba(51, 51, 51, 1);
+    color: #fff;
+    border: 1px solid rgba(51, 51, 51, 1);
+    cursor: pointer;
+}
+
+.user-login-txt {
+    display: inline-block;
+    width: 63px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 1);
+    font-family: PingFang SC;
+    font-weight: 500;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.header-user-online {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 80px;
+    margin-left: 60px;
+    display: none;
+}
+
+.user-profile {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.arrow-icon::before {
+    display: block;
+    content: url("../img/dropu.svg");
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+}
+
+.user-list {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 96px;
+    height: 100px;
+    padding: 0 10px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-item-link {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 76px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    padding-top: 20px;
+    border-bottom: 1px solid rgba(239, 239, 239, 1);
+}
+
+.user-item-name {
+    display: block;
+    width: 56px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    color: rgba(102, 102, 102, 1);
+    font-family: PingFang SC;
+    font-size: 14px;
+}
+
+/* page-mainer部分开始 */
+.page-mainer {
+    width: 1920px;
+    height: 1000px;
+    display: flex;
+}
+
+.collect-section {
+    position: relative;
+}
+
+.mainer-left-content {
+    width: 330px;
+    height: 1000px;
+    padding: 20px 27px 0 40px;
+    border-right: 1px solid rgba(239, 239, 239, 1);
+}
+
+.nav-title {
+    display: block;
+    width: 40px;
+    height: 28px;
+    text-align: center;
+    line-height: 28px;
+    color: rgba(17, 17, 17, 1);
+    font-family: PingFang SC;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.nav-list {
+    display: flex;
+    /* justify-content: space-between;
+    align-content: space-between; */
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.nav-item {
+    display: block;
+    height: 36px;
+    padding: 8px 14px;
+    border: 1px solid rgba(239, 239, 239, 1);
+    background-color: #fff;
+}
+
+.nav-item:focus {
+    background-color: rgba(51, 51, 51, 1);
+
+}
+
+.nav-item:focus .nav-name {
+    color: #fff;
+}
+
+.nav-name {
+    display: block;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    color: rgba(51, 51, 51, 1);
+    font-family: PingFang SC;
+    font-size: 14px;
+}
+
+.nav-retract {
+    display: flex;
+    align-items: center;
+}
+
+.retract-icon::after {
+    display: block;
+    content: url("../img/dropu2.svg");
+    width: 16px;
+    height: 16px;
+    margin-left: 2px;
+    text-align: center;
+    line-height: 16px;
+}
+
+.mainer-right-content {
+    width: 1590px;
+    height: 1000px;
+    padding: 20px 40px 0 20px;
+}
+
+.style-list {
+    width: 1530px;
+    height: 980px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.style-item {
+    width: 290px;
+    height: 404px;
+    cursor: pointer;
+}
+
+.style-img {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    object-fit: cover;
+}
+
+/* window部分 */
+.window-list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-300px, -260px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+.window-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 599px;
+    height: 521px;
+    /* display: none; */
+}
+
+.window-logo {
+    width: 116px;
+    height: 40px;
+    margin-top: 40px;
+    background: url(../img/Frame.png) center center no-repeat;
+}
+
+.window-login {
+    width: 278px;
+    height: 25px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login-title {
+    line-height: 25px;
+    text-align: center;
+    color: rgba(51, 51, 51, 1);
+    font-family: PingFang SC;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.login-phone {
+    color: rgba(153, 153, 153, 1);
+}
+
+.login-phone:visited {
+    color: rgba(51, 51, 51, 1);
+}
+
+.window-code-active {
+    /* display: none; */
+}
+
+.code-img {
+    width: 260px;
+    height: 260px;
+    margin: 20px 0;
+    background: url(../img/QR\ Code.png) center center no-repeat;
+}
+
+.code-subtitle {
+    display: flex;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    margin-left: 32px;
+    height: 20px;
+    color: rgba(51, 51, 51, 1);
+    font-family: PingFang SC;
+    font-size: 14px;
+}
+
+.window-phone-active {
+    display: none;
+}
+
+.num-container,
+.checking-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 400px;
+    margin-top: 40px;
+}
+
+.num-title,
+.checking-title {
+    height: 20px;
+    margin-bottom: 10px;
+    line-height: 20px;
+    text-align: center;
+    color: rgba(102, 102, 102, 1);
+    font-family: PingFang SC;
+    font-size: 14px;
+}
+
+.num-input {
+    width: 400px;
+    height: 40px;
+    padding-left: 10px;
+    border: 1px solid rgba(239, 239, 239, 1);
+    border-radius: 2px;
+    background: transparent;
+    color: rgba(51, 51, 51, 1);
+    font-family: PingFang SC;
+    font-size: 14px;
+    outline: none;
+}
+
+.num-input::placeholder {
+    color: rgba(51, 51, 51, 1);
+}
+
+.checking-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    height: 40px;
+    text-align: left;
+    line-height: 40px;
+    padding-left: 10px;
+    border: 1px solid rgba(239, 239, 239, 1);
+    border-radius: 2px;
+    background: transparent;
+    color: rgba(51, 51, 51, 1);
+    font-family: PingFang SC;
+    font-size: 14px;
+}
+
+.checking-input {
+    height: 20px;
+    line-height: 20px;
+    color: rgba(153, 153, 153, 1);
+    font-family: PingFang SC;
+    font-size: 14px;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+}
+
+.checking-send {
+    width: 90px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-left: 1px solid rgba(239, 239, 239, 1);
+    color: rgba(51, 51, 51, 1);
+    font-family: PingFang SC;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.checking-send:hover {
+    background-color: rgba(239, 239, 239, 1);
+}
+
+.phone-login {
+    width: 400px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin-top: 60px;
+    background: rgba(51, 51, 51, 1);
+    border-radius: 2px;
+    border: 1px solid rgba(51, 51, 51, 1);
+    cursor: pointer;
+}
+
+.phone-login-txt {
+    display: inline-block;
+    width: 28px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    font-family: PingFang SC;
+    font-weight: 500;
+    font-size: 14px;
+}

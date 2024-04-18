@@ -1,0 +1,756 @@
+html,
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+        'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+        'Noto Color Emoji';
+    background-color: rgba(255, 255, 255, 1);
+    position: relative;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header-wapper {
+    width: 1920px;
+    height: 80px;
+    border-bottom: 1px solid rgba(239, 239, 239, 1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1920px;
+    height: 80px;
+    padding: 0 40px;
+}
+
+.header-left-container {
+    height: 80px;
+    width: 910px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo-link {
+    width: 70px;
+    height: 40px;
+}
+
+.header-search {
+    display: flex;
+    align-items: center;
+    width: 600px;
+    height: 40px;
+    padding: 0 15px;
+    border-radius: 20px;
+    background: rgba(238, 238, 238, 1);
+}
+
+.search-icon::before {
+    display: block;
+    content: url("../img/search.svg");
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+}
+
+.search-input {
+    width: 154px;
+    height: 20px;
+    margin-left: 10px;
+    outline: none;
+    border: none;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(153, 153, 153, 1);
+    font-family: PingFang SC;
+    background: transparent;
+}
+
+.scan-icon::before {
+    display: block;
+    content: url("../img/pic_search.svg");
+    width: 24px;
+    height: 24px;
+    margin-left: 358px;
+    text-align: center;
+    line-height: 24px;
+}
+
+.header-right-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header-user-index {
+    width: 32px;
+    height: 80px;
+    /* border-bottom: 2px solid rgba(51, 51, 51, 1); */
+    padding: 29px 0;
+}
+
+.header-user-title {
+    display: inline-block;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    white-space: nowrap;
+    font-family: PingFang SC;
+    font-size: 16px;
+    color: rgba(51, 51, 51, 1);
+}
+
+.header-user-collect {
+    height: 80px;
+    border-bottom: 2px solid rgba(51, 51, 51, 1);
+    padding: 29px 0;
+    margin: 0 0 0 40px;
+}
+
+.header-user-login {
+    display: none;
+    width: 107px;
+    height: 40px;
+    margin-left: 27px;
+    padding: 10px 22px;
+    background: rgba(51, 51, 51, 1);
+    color: #fff;
+    border: 1px solid rgba(51, 51, 51, 1);
+    cursor: pointer;
+}
+
+.user-login-txt {
+    display: inline-block;
+    width: 63px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 1);
+    font-family: PingFang SC;
+    font-weight: 500;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.header-user-online {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 80px;
+    margin-left: 60px;
+
+}
+
+.user-profile {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.arrow-icon::before {
+    display: block;
+    content: url("../img/dropu.svg");
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+}
+
+.user-list {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 96px;
+    height: 100px;
+    padding: 0 10px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-item-link {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 76px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    padding-top: 20px;
+    border-bottom: 1px solid rgba(239, 239, 239, 1);
+}
+
+.user-item-name {
+    display: block;
+    width: 56px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    color: rgba(102, 102, 102, 1);
+    font-family: PingFang SC;
+    font-size: 14px;
+}
+
+/* page-mainer部分开始 */
+.page-mainer {
+    width: 1920px;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.collect-title {
+    margin-top: 40px;
+    width: 1316px;
+    height: 42px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.collect-title-name {
+    width: 120px;
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    color: rgba(51, 51, 51, 1);
+    font-family: PingFang SC;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.collect-icon-container {
+    height: 42px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.collect-icon::after {
+    display: block;
+    content: url("../img/create.svg");
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+}
+
+.collect-create {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-left: 56px;
+    border-radius: 50%;
+    background: rgba(238, 238, 238, 1);
+}
+
+/* create-icon-active手动 */
+/* .create-icon-active {
+    display: none;
+} */
+
+.collect-create-icon::after {
+    display: block;
+    content: url("../img/create.svg");
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+}
+
+.collect-create:hover .create-btn {
+    display: block;
+}
+
+.create-btn {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    width: 76px;
+    height: 25px;
+    padding: 4px 8px;
+    background: rgba(51, 51, 51, 1);
+    color: #fff;
+    border: 1px solid rgba(51, 51, 51, 1);
+    transition: all 2s ease;
+    cursor: pointer;
+}
+
+.create-btn-txt {
+    display: inline-block;
+    width: 60px;
+    height: 17px;
+    line-height: 17px;
+    text-align: center;
+    font-family: PingFang SC;
+    font-size: 12px;
+}
+
+.collect-list {
+    width: 1220px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/* collect-active收藏夹内容手动 */
+/* .collect-active {
+    display: none;
+} */
+
+
+
+/* empty-active手动empty符号 */
+.empty-active {
+    display: none;
+}
+
+.collect-empty {
+    position: absolute;
+    top: 340px;
+    left: 900px;
+    width: 120px;
+    height: 120px;
+}
+
+.collect-empty::before {
+    display: block;
+    content: url("../img/empty.svg");
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    text-align: center;
+}
+
+
+
+.collect-card {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 290px;
+    width: 290px;
+    height: 217px;
+    border-radius: 4px;
+    background: rgba(204, 204, 204, 1);
+}
+
+.collect-card:hover .collect-shade {
+    opacity: 1;
+}
+
+.collect-shade {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    z-index: 2;
+    align-items: flex-end;
+    transition: opacity 300ms ease;
+    border-radius: 4px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+}
+
+.collect-shade-content {
+    width: 270px;
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.shade-sign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.shade-sign::before {
+    display: block;
+    content: url("../img/edit.svg");
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+}
+
+.collect-img {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.collect-item-right {
+    width: 100px;
+    height: 217px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.collect-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.collect-info-style {
+    width: 290px;
+    height: 34px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.collect-info-privacy {
+    display: block;
+    content: url("../img/lock.svg");
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.collect-info-class {
+    width: 240px;
+    height: 34px;
+    line-height: 34px;
+    text-align: left;
+    color: rgba(51, 51, 51, 1);
+    font-family: PingFang SC;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.collect-info-num {
+    width: 44px;
+    height: 20px;
+    margin-top: 5px;
+    line-height: 20px;
+    text-align: left;
+    color: rgba(102, 102, 102, 1);
+    font-family: PingFang SC;
+    font-size: 14px;
+}
+
+/* collect-active部分 */
+.collect-window-active {
+    z-index: 999;
+    width: 599px;
+    height: 521px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-300px, -260px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.45);
+
+}
+
+/* 弹窗手动 */
+.collect-window-active {
+    display: none;
+}
+
+.window-title {
+    width: 120px;
+    height: 34px;
+    margin-top: 40px;
+    line-height: 34px;
+    text-align: center;
+    color: rgba(51, 51, 51, 1);
+    font-family: PingFang SC;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.window-name-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 519px;
+    margin-top: 30px;
+}
+
+.window-name-title,
+.window-describe-title {
+    height: 20px;
+    margin-bottom: 10px;
+    line-height: 20px;
+    text-align: center;
+    color: rgba(102, 102, 102, 1);
+    font-family: PingFang SC;
+    font-size: 14px;
+}
+
+.window-name-input {
+    width: 519px;
+    height: 40px;
+    padding-left: 10px;
+    border-radius: 2px;
+    border: 1px solid rgba(239, 239, 239, 1);
+    color: rgba(51, 51, 51, 1);
+    background: transparent;
+    font-family: PingFang SC;
+    font-size: 14px;
+    outline: none;
+}
+
+.window-name-input:focus {
+    border-color: rgba(51, 51, 51, 1);
+}
+
+.window-describe-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 519px;
+    margin-top: 24px;
+}
+
+
+.window-describe-title {
+    margin-bottom: 6px;
+}
+
+.window-describe-txt {
+    width: 519px;
+    height: 100px;
+    border: 1px solid rgba(239, 239, 239, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.window-describe-input {
+    height: 20px;
+    line-height: 20px;
+    color: rgba(51, 51, 51, 1);
+    font-family: PingFang SC;
+    font-size: 14px;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+}
+
+.window-describe-num {
+    height: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    line-height: 20px;
+    text-align: right;
+    color: rgba(102, 102, 102, 1);
+    font-family: PingFang SC;
+    font-size: 14px;
+}
+
+.window-info-container {
+    width: 519px;
+    height: 47px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.window-info-title {
+    width: 160px;
+    height: 22px;
+    margin-bottom: 5px;
+    line-height: 22px;
+    text-align: center;
+    color: rgba(51, 51, 51, 1);
+    font-family: PingFang SC;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.window-info-detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.window-info-subtitle {
+    width: 182px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: rgba(102, 102, 102, 1);
+    font-family: PingFang SC;
+    font-size: 14px;
+}
+
+.window-info-icon::after {
+    display: block;
+    width: 40px;
+    height: 24px;
+    content: url("../img/swtich-off.svg");
+    text-align: center;
+    line-height: 24px;
+}
+
+.window-info-icon::before {
+    display: block;
+    width: 40px;
+    height: 24px;
+    content: url("../img/swtich-on.svg");
+    text-align: center;
+    line-height: 24px;
+}
+
+/* 设置按钮手动 */
+/* .window-info-icon::after {
+    display: none;
+} */
+
+.window-info-icon::before {
+    display: none;
+}
+
+
+.window-switch-container {
+    width: 519px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 切换按钮手动 */
+/* .window-switch-active {
+    display: none;
+} */
+
+.window-switch-cancel {
+    width: 28px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: rgba(153, 153, 153, 1);
+    font-family: PingFang SC;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.window-switch-creat {
+    width: 72px;
+    height: 40px;
+    border-radius: 2px;
+    padding: 10px 22px;
+    background: rgba(51, 51, 51, 1);
+    color: #fff;
+    border: 1px solid rgba(51, 51, 51, 1);
+    cursor: pointer;
+}
+
+.switch-creat-txt {
+    display: inline-block;
+    width: 28px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-family: PingFang SC;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.window-select-container {
+    width: 519px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* select手动 */
+.window-select-active {
+    display: none;
+}
+
+.window-select-remove {
+    width: 114px;
+    height: 40px;
+    line-height: 20px;
+    text-align: center;
+    white-space: nowrap;
+    padding: 10px 22px;
+    border-radius: 2px;
+    color: rgba(51, 51, 51, 1);
+    border: 1px solid rgba(238, 238, 238, 1);
+    font-family: PingFang SC;
+    font-weight: 500;
+    font-size: 14px;
+    background: rgba(238, 238, 238, 1);
+    cursor: pointer;
+}
+
+.window-select-confirm {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.confirm-btn {
+    width: 72px;
+    height: 40px;
+    line-height: 20px;
+    text-align: center;
+    white-space: nowrap;
+    padding: 10px 22px;
+    border-radius: 2px;
+    color: rgba(51, 51, 51, 1);
+    border: 1px solid rgba(238, 238, 238, 1);
+    font-family: PingFang SC;
+    font-weight: 500;
+    font-size: 14px;
+    background: rgba(238, 238, 238, 1);
+    cursor: pointer;
+}
+
+.confirm-btn:nth-child(2) {
+    background: rgba(51, 51, 51, 1);
+    color: rgba(238, 238, 238, 1);
+    border: 1px solid rgba(51, 51, 51, 1);
+}
